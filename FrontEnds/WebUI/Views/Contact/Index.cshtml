@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+@await Component.InvokeAsync("_ContactOverlayComponentPartial")
+<section class="ftco-section contact-section">
+    <div class="container">
+        <div class="row d-flex mb-5 contact-info">
+            @await Component.InvokeAsync("_FooterAddressComponentPartial")
+            @await Component.InvokeAsync("_ContactMessageComponentPartial")
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div id="map" class="bg-white"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
